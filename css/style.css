@@ -1,0 +1,49 @@
+.navbar {
+  width:100vw;
+  height:80px;
+  background:#333;
+}
+.header {
+  height:400px;
+  width:100vw;
+  margin:8px 0 48px 0;
+  background:#999;
+}
+.main {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.main__breadcrumbs {
+  width: 100%;
+  background: #ff0000;
+  margin: 0;
+  height: 80px;
+  -webkit-padding-start: 0px;
+  grid-column: span 3;
+}
+.main__content {
+  max-width:800px;
+  min-height:1000px;
+  background:#333;
+  grid-column: span 2;
+}
+.main__aside {
+  max-width:400px;
+  background:#999;
+  min-height:1000px;
+}
+.support {
+  width:100vw;
+  min-height:600px;
+  background:#333;
+  margin-top:48px;
+}
+.footer {
+  width:100vw;
+  padding:80px;
+  background:#999;
+  margin-top:8px;
+}

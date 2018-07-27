@@ -234,6 +234,9 @@ top:8px;
 .video-group {
   position:relative;
 }
+.video-group video {
+  width:100%;
+}
 .video-group .video-player {
   width: 48px;
   height: 48px;

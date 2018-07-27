@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Onboarding VI Fundamentals</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -23,10 +23,10 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <nav class="navbar" role="navigation">
+  <nav class="navbar">
     <input type="search" class="navbar-search" placeholder="Search..">
   </nav>
-  <header class="header" role="header">
+  <header class="header">
       <div class="container">
       <div class="header-image"></div>
       <div class="header-content">
@@ -62,15 +62,15 @@
         <section>
             <h2 class="h2 down-space">Video Section</h2>
             <div class="video-group">
-            <video width="100%" controls>
+            <video controls>
                 <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
                 <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
                 Your browser does not support HTML5 video.
               </video>
             <!-- <img src="https://dummyimage.com/480x240/e9e9e9/ccccccc" alt="" class="img-responsive" >
-            <span class="video-player"> -->
+            <span class="video-player">
               <span class="overlay"></span>
-            </span>
+            </span> -->
             </div>
             <span class="video-timer">3:06</span>
             <p class="text"> 
@@ -108,23 +108,23 @@
 
           <blockquote>Someone said something cool</blockquote>
 
-          <form action="">
+          <form action="/somewhere.php">
             <h2 class="h2">Form</h2>
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text">
+              <input type="text" id="name">
             </div>
             <div class="form-group">
-              <label for="">text mandatory*</label>
-              <input type="text" required>
+              <label for="last-name">Last Name*</label>
+              <input type="text" id="last-name" value="last-name" required>
             </div>
             <div class="form-group">
-                <label for="">Number</label>
-                <input type="number">
+                <label for="phone">Number</label>
+                <input type="number" id="phone" value="">
             </div>
             <div class="form-group">
-                <label for="">text</label>
-                <textarea name="" id=""></textarea>
+                <label for="address">Address</label>
+                <textarea name="address" id="address"></textarea>
             </div>
             <div class="form-group">
                 <label for="">checkbox</label>
@@ -150,18 +150,18 @@
 
             </div>
             <div class="form-group">
-                <label for="">select</label>
+                <label for="choose">select</label>
                 <div class="select-with-arrow">
-                <select name="" id="">
-                  <option value="">yes</option>
-                  <option value="">no</option>
+                <select name="choose" id="choose">
+                  <option value="0">yes</option>
+                  <option value="1">no</option>
                 </select>
                 <span class="select-arrow"></span>
               </div>
             </div>
             <div class="form-group bottom-bordered">
-                <label for="">email field(mandatory)</label>
-                <input type="email" required>
+                <label for="email">email field(mandatory)</label>
+                <input type="email" name="email" value="email" id="email" required>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn-submit">Send</button>
@@ -200,7 +200,7 @@
   </main>
 
   <!-- Support -->
-  <article class="wrap-support">
+  <div class="support">
     <div class="container">
       <section>
         <div class="teaser single-content active">
@@ -239,7 +239,7 @@
           <div class="teaser-column">
           <h3 class="h3">Test Video</h3>
             <div class="video-group">
-              <video width="100%" controls>
+              <video controls>
                   <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
                   <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
                   Your browser does not support HTML5 video.
@@ -257,7 +257,7 @@
           <div class="video--block">
               <h4 class="h4">Small Video Name</h4>
               <div class="video-group">
-                  <video width="100%" controls>
+                  <video controls>
                       <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
                       <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
                       Your browser does not support HTML5 video.
@@ -290,7 +290,7 @@
         </div>
       </section>      
     </div>
-  </article>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

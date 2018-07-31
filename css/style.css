@@ -281,12 +281,18 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 /**** Main Content ****/
 .content {
-  max-width:800px;
   min-height:100px;
   grid-column: span 3;
   padding:0 24px;
 }
 
+@media(min-width:480px){
+  .content section img {
+    float: left;
+    width: 50%;
+    margin-right: 15px;
+  }
+}
 .video-group {
   position:relative;
 }
@@ -479,6 +485,9 @@ form footer.sub-info {
   position:relative;
   padding-bottom:24px;
 }
+.aside-contacts h2 {
+  margin-top:0;
+}
 .aside-contacts .contacts-group::after {
   content: '';
   position: absolute;
@@ -594,7 +603,7 @@ teaser .teaser-image{
 /*********** Media Query ************/
 /* Media Query **********************/
 
-@media(min-width:600px){
+@media(min-width:1024px){
   .breadcrumbs {
     grid-column:span 3;
   }

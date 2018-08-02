@@ -855,6 +855,11 @@ ul.doc-type li img {
   width: 56px;
   height: 56px;
 }
+ul.doc-type li svg {
+  width: 56px;
+  height: 56px;
+  fill:#D3CDCE;
+}
 
 ul.doc-type li .doc-content {
   margin-left: 12px;
@@ -979,4 +984,29 @@ teaser .teaser-image {
     grid-column: span 1;
   }
   
+}
+
+/********************** SVG MARKUP */
+/*********** SVG MARKUP ************/
+/* SVG MARKUP **********************/
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-file-excel-o {
+  width: 0.857421875em;
 }

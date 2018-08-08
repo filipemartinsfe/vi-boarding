@@ -1,15 +1,13 @@
 * {
-  font-family: 'lato', serif;
-
   box-sizing: border-box;
+  font-family: 'lato', serif;
 }
 
 html,
 body {
-  overflow-x: hidden;
-
-  margin: 0;
   padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 p,
@@ -21,13 +19,10 @@ h5,
 h6 {
   margin-bottom: 0;
 }
-/********************** General Codes */
-/*********** General Codes ************/
-/* General Codes **********************/
 
+/*********** General Codes ************/
 .cta-parent {
   position: relative;
-
   padding-top: 34px;
 }
 
@@ -36,21 +31,17 @@ h6 {
   top: 12px;
   right: 0;
   left: 0;
-
   width: 100%;
   height: 1px;
   margin-right: auto;
   margin-left: auto;
-
   content: '';
-
   background: #e9e9e9;
 }
 
 /*image*/
 .img-responsive {
   display: block;
-
   width: 100%;
   height: auto;
 }
@@ -58,49 +49,38 @@ h6 {
 /*links*/
 a {
   position: relative;
-
   display: block;
-
-  margin-bottom: 12px;
   padding-left: 12px;
-
-  transition: .3s;
-  text-decoration: none;
-
+  margin-bottom: 12px;
   color: #199ed1;
+  text-decoration: none;
+  transition: .3s;
 }
 
 a:hover {
   color: #999;
 }
 
-a:after {
+a::before {
   position: absolute;
   top: 8px;
   left: 0;
-
   width: 8px;
   height: 8px;
-
   content: '';
-
   background: url('../img/right-arrow.svg') center/cover no-repeat;
 }
 
 .phone-contact {
   position: relative;
-
   display: block;
-
-  text-decoration: none;
-
   color: #333;
+  text-decoration: none;
 }
 
 /*container*/
 .container {
   position: relative;
-
   max-width: 1280px;
   margin: auto;
 }
@@ -110,7 +90,6 @@ a:after {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-
   color: #666;
 }
 
@@ -118,17 +97,14 @@ a:after {
   font-size: 24px;
   font-weight: 300;
   line-height: 32px;
-
   color: #fff;
 }
 
 h1 {
+  margin-top: 0;
   font-size: 30px;
   font-weight: 300;
   line-height: 38px;
-
-  margin-top: 0;
-
   color: #777;
 }
 
@@ -140,7 +116,6 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   line-height: 36px;
-
   color: #999;
 }
 
@@ -152,7 +127,6 @@ h3 {
   font-size: 20px;
   font-weight: 300;
   line-height: 28px;
-
   color: #999;
 }
 
@@ -160,7 +134,6 @@ h4 {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-
   color: #999;
 }
 
@@ -176,9 +149,7 @@ h4 {
   font-weight: 300;
 }
 
-/********************** Navbar */
 /*********** Navbar ************/
-/* Navbar **********************/
 .navbar {
   width: 100vw;
   height: auto;
@@ -202,68 +173,57 @@ h4 {
 
 .navbar-links {
   display: none;
-
   margin: 0;
 
+  align-content: flex-start;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: flex-start;
   grid-column: 1/4;
   -webkit-padding-start: 0;
 }
 
 .navbar-links li {
   margin-right: 18px;
-
   list-style: none;
 }
 
 .navbar-links li a {
-  font-size: 18px;
-
+  padding-left: 0;
   margin-top: 18px;
   margin-bottom: 0;
-  padding-left: 0;
+  font-size: 18px;
 }
 
-.navbar-links li a:after {
+.navbar-links li a::before {
   position: inherit;
   top: inherit;
   left: inherit;
-
   width: inherit;
   height: inherit;
-
   content: '';
-
   background: inherit;
 }
 
 .navbar-search {
   position: relative;
-
   min-width: 220px;
   height: 34px;
   padding: 0 24px;
-
-  border: none;
-  border-radius: 80px;
-  background: url('../img/search.svg') center/cover no-repeat,linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12));
+  background: url('../img/search.svg')
+  center/cover no-repeat,linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12));
   background-position: 90% 50%;
   background-size: 16px 16px;
+  border: none;
+  border-radius: 80px;
 }
 
 @media(min-width:480px) {
-
   .navbar-links {
     display: flex;
   }
-
 }
 
-/********************** Header */
 /*********** Header ************/
-/* Header **********************/
 .stage {
   margin-bottom: 10px;
 
@@ -271,14 +231,28 @@ h4 {
 }
 
 .stage-image {
-  min-height: 200px;
-
+  height: 200px;
   background: url('https://dummyimage.com/768x432/e9e9e9/ccccccc') center/cover no-repeat;
+}
+.stage-back {
+  position:relative;
+  height: 100%;
+  width:100%;
+  z-index:-1;
+}
+.stage-back-color {
+  width: 100vw;
+  height: 432px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background:#199ed1;
 }
 
 .stage-content {
   padding: 24px 24px 36px 24px;
-
   background: #199ed1;
 }
 
@@ -292,57 +266,45 @@ h4 {
 
 .stage-content .btn-white-arrowed {
   position: relative;
-
   min-width: 180px;
   height: 36px;
   margin-top: 24px;
-
+  color: #199ed1;
   text-align: left;
   text-indent: 8px;
-
-  color: #199ed1;
-  border: 1px solid #fff;
   background: #fff;
+  border: 1px solid #fff;
 }
 
 .stage-content .btn-white-arrowed::after {
   position: absolute;
   top: 8px;
   right: 18px;
-
   width: 20px;
   height: 20px;
-
   content: '';
-
   background: url('../img/right-arrow.svg') center/cover no-repeat;
 }
 
 @media(min-width:768px) {
-
   .stage-image {
-    min-height: 432px;
+    height: 432px;
+    position:relative;
   }
 
   .stage-content {
     position: absolute;
     top: 50%;
     right: 54px;
-
     min-width: 380px;
     padding: 36px 24px;
-
     transform: translateY(-50%);
   }
-
 }
 
-/********************** Main */
 /*********** Main ************/
-/* Main **********************/
 .main {
   display: grid;
-
   max-width: 1280px;
   margin: auto;
 
@@ -363,19 +325,15 @@ ul.breadcrumbs {
 
 ul.breadcrumbs li {
   position: relative;
-
   display: inline-block;
-
-  margin-left: 16px;
   padding-left: 12px;
-
+  margin-left: 16px;
   color: #199ed1;
 }
 
 ul.breadcrumbs li a {
-  font-size: 14px;
-
   margin-bottom: 0;
+  font-size: 14px;
 }
 
 ul.breadcrumbs li:last-child a {
@@ -391,14 +349,11 @@ ul.breadcrumbs li:last-child a {
 }
 
 @media(min-width:480px) {
-
   .content section img {
     float: left;
-
     width: 50%;
-    margin-right: 15px;
+    margin-right: 24px;
   }
-
 }
 
 video {
@@ -406,8 +361,7 @@ video {
 }
 
 @media(min-width:600px) {
-
-  .video--block {
+  .video-block {
     display: grid;
 
     grid-auto-flow: dense;
@@ -416,28 +370,25 @@ video {
     grid-template-columns: repeat(6,1fr);
   }
 
-  .video--block h4 {
+  .video-block h4 {
     grid-column: 1/7;
   }
 
-  .video--block video {
+  .video-block video {
     grid-column: 1/4;
   }
 
-  .video--block .video-timer {
+  .video-block .video-timer {
     display: block;
-
     width: 100%;
     margin-top: 6px;
-
-    text-align: right;
-
     color: #999;
+    text-align: right;
 
     grid-column: 1/4;
   }
 
-  .video--block .text {
+  .video-block .text {
     grid-column: 4/7;
   }
 
@@ -450,12 +401,10 @@ video {
 
     grid-column: 4/7;
   }
-
 }
 
 @media(min-width:1024px) {
-
-  .video--block {
+  .video-block {
     display: block;
 
     grid-column: 1/3;
@@ -468,7 +417,6 @@ video {
   .support .document-group {
     grid-column: 5/7;
   }
-
 }
 
 .list {
@@ -494,9 +442,7 @@ video {
   width: 50%;
   height: 40px;
   padding: 8px;
-
   text-align: left;
-
   border: 1px solid #ccc;
 }
 
@@ -511,32 +457,25 @@ video {
 
 blockquote {
   position: relative;
-
   margin: 60px 0;
 }
 
 blockquote:before {
+  margin-right: .12em;
   font-size: 4em;
   line-height: .1em;
-
-  margin-right: .12em;
-
-  content: open-quote;
-  vertical-align: -.4em;
-
   color: #333;
+  vertical-align: -.4em;
+  content:'\201c';
 }
 
 blockquote:after {
+  margin-left: .25em;
   font-size: 1em;
   line-height: .1em;
-
-  margin-left: .25em;
-
-  content: close-quote;
-  vertical-align: 0;
-
   color: #333;
+  vertical-align: 0;
+  content:'\201d';
 }
 
 .form-group {
@@ -544,7 +483,6 @@ blockquote:after {
 }
 
 @media(min-width:767px) {
-
   .form-group {
     display: flex;
 
@@ -572,7 +510,6 @@ blockquote:after {
   .form-group .select-with-arrow {
     width: 100%;
   }
-
 }
 
 .form-group > * {
@@ -591,7 +528,6 @@ blockquote:after {
 .form-group textarea,
 .form-group select {
   display: block;
-
   border: 1px solid #ccc;
 }
 
@@ -606,7 +542,6 @@ blockquote:after {
 .form-group select {
   width: 100%;
   height: 38px;
-
   background: #fff;
 }
 
@@ -616,12 +551,10 @@ blockquote:after {
 }
 
 .form-group select {
+  -webkit-appearance: none;
   text-indent: 16px;
-
   border-radius: 0;
   outline: 0;
-
-  -webkit-appearance: none;
 }
 
 .form-group .select-with-arrow {
@@ -632,80 +565,68 @@ blockquote:after {
   position: absolute;
   top: 0;
   right: 0;
-
   display: flex;
-  display: block;
-
   width: 25px;
   height: 100%;
-
   pointer-events: none;
-
-  background: url(../img/drop-arrow.svg) center/cover no-repeat,linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12));
+  background: url(../img/drop-arrow.svg)
+  center/cover no-repeat,linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12));
   background-size: 12px 12px;
 
-  justify-content: center;
   align-content: center;
+  justify-content: center;
 }
 
 .form-group .btn-submit,
 .form-group .btn-cancel {
   display: inline-block;
-
   width: 88px;
   height: 32px;
 }
 
 .form-group .btn-submit {
-  transition: .3s ease-in-out;
-
   color: #fff;
-  border: 1px solid #199ed1;
   background: #199ed1;
+  border: 1px solid #199ed1;
+  transition: .3s ease-in-out;
 }
 
 .form-group .btn-submit:hover {
   color: #199ed1;
-  border: 1px solid #fff;
   background: #fff;
+  border: 1px solid #fff;
 }
 
 .form-group .btn-cancel {
   display: inline-flex;
-
+  padding-left: 0;
   margin-bottom: 0;
   margin-left: 12px;
-  padding-left: 0;
-
-  transition: .3s ease-in-out;
-  text-align: center;
-  vertical-align: top;
-  text-decoration: none;
-
   color: #fff;
-  border: 1px solid #999;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
   background: #999;
+  border: 1px solid #999;
+  transition: .3s ease-in-out;
 
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .form-group .btn-cancel:hover {
   color: #999;
-  border: 1px solid #999;
   background: #fff;
+  border: 1px solid #999;
 }
 
 .form-group .btn-cancel::after {
   position: initial;
   top: initial;
   left: initial;
-
   width: initial;
   height: initial;
-
   content: '';
-
   background: initial;
 }
 
@@ -713,9 +634,7 @@ form footer.sub-info {
   color: #999;
 }
 
-/********************** Aside */
 /*********** Aside ************/
-/* Aside **********************/
 .aside {
   min-height: 100px;
   padding: 0 24px;
@@ -725,9 +644,7 @@ form footer.sub-info {
 
 .aside-contacts .contacts-group {
   position: relative;
-
   display: flex;
-
   padding-bottom: 24px;
 
   flex-wrap: wrap;
@@ -742,20 +659,16 @@ form footer.sub-info {
   right: 0;
   bottom: 12px;
   left: 0;
-
   width: 100%;
   height: 1px;
   margin-right: auto;
   margin-left: auto;
-
   content: '';
-
   background: #e9e9e9;
 }
 
 .aside-contacts h2:first-child {
   position: relative;
-
   padding-bottom: 24px;
 }
 
@@ -764,20 +677,16 @@ form footer.sub-info {
   right: 0;
   bottom: 12px;
   left: 0;
-
   width: 100%;
   height: 1px;
   margin-right: auto;
   margin-left: auto;
-
   content: '';
-
   background: #e9e9e9;
 }
 
 .aside-contacts h3 {
   position: relative;
-
   padding-bottom: 24px;
 }
 
@@ -786,28 +695,27 @@ form footer.sub-info {
   right: 0;
   bottom: 12px;
   left: 0;
-
   width: 100%;
   height: 1px;
   margin-right: auto;
   margin-left: auto;
-
   content: '';
-
   background: #e9e9e9;
 }
 
 .contacts-group .contacts-image {
-  width: 35%;
-  margin-right: 5%;
+  width: 130px;
 }
 
 .contacts-group .contacts-image img {
   margin-top: 16px;
+  width:100%;
+  height:160px;
 }
 
 .contacts-group .contacts-content {
-  width: 60%;
+  width: calc(100% - 130px);
+  padding-left:24px;
 }
 
 .contacts-group .contacts-content p:nth-child(2) {
@@ -823,84 +731,72 @@ form footer.sub-info {
 }
 
 @media(min-width:480px) {
-
   .document-group {
     display: block;
   }
-
 }
 
-ul.doc-type {
+ul.doc-list {
   margin-top: 12px;
 
   -webkit-padding-start: 0;
 }
 
-ul.doc-type li {
+ul.doc-list li {
   display: flex;
-
   width: 100%;
   padding: 12px 0;
-
   list-style: none;
-
   border-top: 1px solid #a29d9d;
 }
 
-ul.doc-type li:last-child {
+ul.doc-list li:last-child {
   border-bottom: 1px solid #a29d9d;
 }
 
-ul.doc-type li img {
+ul.doc-list li img {
   width: 56px;
   height: 56px;
 }
-ul.doc-type li svg {
+ul.doc-list li svg {
   width: 56px;
   height: 56px;
-  fill:#D3CDCE;
+
+  fill: #d3cdce;
 }
 
-ul.doc-type li .doc-content {
+ul.doc-list li .doc-content {
   margin-left: 12px;
 }
 
-ul.doc-type li .doc-content a {
-  font-size: 18px;
-
-  margin-bottom: 8px;
+ul.doc-list li .doc-content a {
   padding-left: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
-ul.doc-type li .doc-content a::after {
+ul.doc-list li .doc-content a::before {
   position: initial;
   top: initial;
   left: initial;
-
   width: initial;
   height: initial;
-
   content: '';
-
   background: initial;
 }
 
-ul.doc-type li .doc-content p {
-  font-size: 18px;
-
+ul.doc-list li .doc-content p {
   margin-top: 0;
-
+  font-size: 18px;
   color: #a29d9d;
 }
 
-/********************** Support */
 /*********** Support ************/
-/* Support **********************/
 .support {
   width: 100vw;
   min-height: 600px;
-  margin-top: 48px;
   padding: 0;
+  margin-top: 48px;
 }
 
 .small-title {
@@ -908,8 +804,8 @@ ul.doc-type li .doc-content p {
 }
 
 .teaser {
-  margin-top: 12px;
   padding: 24px;
+  margin-top: 12px;
 }
 
 .teaser.active {
@@ -921,7 +817,6 @@ teaser .teaser-image {
 }
 
 @media(min-width:600px) {
-
   .teaser {
     display: grid;
 
@@ -944,17 +839,13 @@ teaser .teaser-image {
   .teaser .teaser-column {
     grid-column: span 3;
   }
-
 }
 
-/********************** Footer */
 /*********** Footer ************/
-/* Footer **********************/
 .footer {
   width: 100vw;
-  margin-top: 8px;
   padding: 40px 24px;
-
+  margin-top: 8px;
   background: #333;
 }
 
@@ -966,12 +857,8 @@ teaser .teaser-image {
   color: #fff;
 }
 
-/********************** Media Query */
 /*********** Media Query ************/
-/* Media Query **********************/
-
 @media(min-width:1024px) {
-
   .breadcrumbs {
     grid-column: span 3;
   }
@@ -983,17 +870,15 @@ teaser .teaser-image {
   .aside {
     grid-column: span 1;
   }
-  
 }
 
-/********************** SVG MARKUP */
-/*********** SVG MARKUP ************/
-/* SVG MARKUP **********************/
 
+/*********** SVG MARKUP ************/
 .icon {
   display: inline-block;
   width: 1em;
   height: 1em;
+
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -1008,5 +893,5 @@ Single-colored icons can be modified like so:
 ========================================== */
 
 .icon-file-excel-o {
-  width: 0.857421875em;
+  width: .857421875em;
 }

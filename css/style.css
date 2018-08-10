@@ -818,7 +818,7 @@ ul.doc-list li .doc-content p {
   margin-top: 48px;
 }
 
-.small-title {
+/* .small-title {
   font: 300 16px/24px 'Lato', serif;
 }
 
@@ -862,10 +862,10 @@ teaser .teaser-image {
 
   .teaser-row .teaser-column {
     grid-column: span 3;
-  }
+  } */
 
   /* Teaser to Teaser-row with multiple teasers inside */
-  .teaser-row {
+  /* .teaser-row {
     display: grid;
 
     grid-gap: 32px;
@@ -880,7 +880,7 @@ teaser .teaser-image {
     grid-template-columns: initial;
     display:block;
   }
-}
+} */
 
 /*********** Footer ************/
 .footer {
@@ -936,3 +936,148 @@ Single-colored icons can be modified like so:
 .icon-file-excel-o {
   width: .857421875em;
 }
+
+
+
+.imgResponsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.teaserRow {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 24px;
+}
+@media (min-width: 600px) {
+  .teaserRow {
+    grid-gap: 32px;
+  }
+}
+.teaserRow__teaser {
+  min-height: 120px;
+  grid-column: span 12;
+  margin-top: 32px;
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser {
+    margin-top: 0;
+  }
+}
+.teaserRow__teaser:first-child {
+  margin-top: 0;
+}
+.teaserRow__teaser:nth-last-child(2), .teaserRow__teaser:nth-last-child(2) ~ .teaserRow__teaser {
+  grid-column: span 12;
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser:nth-last-child(2), .teaserRow__teaser:nth-last-child(2) ~ .teaserRow__teaser {
+    grid-column: span 6;
+  }
+}
+.teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
+  grid-column: span 12;
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
+    grid-column: span 6;
+  }
+  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 767px) {
+  .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
+    grid-column: span 6;
+  }
+  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 1024px) {
+  .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
+    grid-column: span 4;
+  }
+  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+    grid-column: span 4;
+  }
+}
+.teaserRow__teaser--fullWidth {
+  grid-column: span 12;
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser--fullWidth {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-column-gap: 32px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser--fullWidth h4 {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 1024px) {
+  .teaserRow__teaser--fullWidth h4 {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser--fullWidth video {
+    grid-column: 1/4;
+  }
+}
+@media (min-width: 1024px) {
+  .teaserRow__teaser--fullWidth video {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser--fullWidth .video-timer {
+    grid-column: 1/4;
+  }
+}
+@media (min-width: 1024px) {
+  .teaserRow__teaser--fullWidth .video-timer {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 600px) {
+  .teaserRow__teaser--fullWidth .text {
+    grid-column: 4/7;
+  }
+}
+@media (min-width: 1024px) {
+  .teaserRow__teaser--fullWidth .text {
+    grid-column: 1/7;
+  }
+}
+.teaserRow__teaser video {
+  width: 100%;
+}
+.teaserRow__teaser .video-timer {
+  display: block;
+  text-align: right;
+}
+.teaserRow .sideBySide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 600px) {
+  .teaserRow .sideBySide {
+    grid-gap: 32px;
+  }
+}
+.teaserRow .sideBySide .column {
+  grid-column: span 2;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .teaserRow .sideBySide .column {
+    grid-column: span 1;
+  }
+}
+

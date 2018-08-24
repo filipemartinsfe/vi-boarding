@@ -209,7 +209,7 @@ h4 {
   min-width: 220px;
   height: 34px;
   padding: 0 24px;
-  background: url('../img/search.svg')
+  background: url(sprite.svg#icon-file-excel-o) no-repeat;
   center/cover no-repeat,linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12));
   background-position: 90% 50%;
   background-size: 16px 16px;
@@ -499,7 +499,7 @@ blockquote:after {
   margin-top: 16px;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
   .form-group {
     display: flex;
 
@@ -732,10 +732,10 @@ form footer.sub-info {
   height:160px;
 }
 
-.contacts-group .contacts-content {
-  /* width: calc(100% - 130px); */
-  /* padding-left:24px; */
-}
+/* .contacts-group .contacts-content {
+  width: calc(100% - 130px);
+  padding-left:24px;
+} */
 
 .contacts-group .contacts-content p:nth-child(2) {
   margin-top: 0;
@@ -898,6 +898,7 @@ teaser .teaser-image {
   color: #fff;
 }
 
+
 /*********** Media Query ************/
 @media(min-width:1024px) {
   .breadcrumbs {
@@ -946,9 +947,10 @@ Single-colored icons can be modified like so:
 }
 
 .teaserRow {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: dense;
+  margin-top: 20px;
   padding: 24px;
 }
 @media (min-width: 600px) {
@@ -984,15 +986,17 @@ Single-colored icons can be modified like so:
   .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
     grid-column: span 6;
   }
-  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+  .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser--fullWidth {
     grid-column: span 12;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
     grid-column: span 6;
   }
-  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+ /* .teaserRow__teaser:nth-last-child(3),
+ .teaserRow__teaser:nth-last-child(3) ~ */
+ .teaserRow .teaserRow__teaser--fullWidth {
     grid-column: span 12;
   }
 }
@@ -1000,10 +1004,11 @@ Single-colored icons can be modified like so:
   .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser {
     grid-column: span 4;
   }
-  .teaserRow__teaser:nth-last-child(3):first-child, .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser:first-child {
+  .teaserRow__teaser:nth-last-child(3), .teaserRow__teaser:nth-last-child(3) ~ .teaserRow__teaser--fullWidth {
     grid-column: span 4;
   }
 }
+/* Full width */
 .teaserRow__teaser--fullWidth {
   grid-column: span 12;
 }
